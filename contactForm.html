@@ -7,53 +7,61 @@
 
 <body>
 <div id="container" align="center">
-	<h1 style="font-family:Tahoma, Geneva, sans-serif">CONTACT FORM</h1>
-    
-    <div class="contact_form" style="display:block; width:100%; max-width:750px;">
-    	<hr />
-    	<input type="text" placeholder="Name" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;"/>
-        <input type="text" placeholder="Middle Name" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;"/>
-        <input type="text" placeholder="Last Name" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;"/>
-    </div>
-    <div style="display:block; width:100%; max-width:750px;">
-    	<input type="radio" name="gender" value="male" />Male
-        <input type="radio" name="gender" value="male" />Female
-    </div>
-    <h1 style="font-family:Tahoma, Geneva, sans-serif; font-size:20px; margin-bottom:-5px">Date of Birth</h1>
-    <div align="center" style="display:block; width:100%; max-width:750px;">
-    	<select>
-        	<option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-        </select>
-        <select>
-			  <script>
+	<div class="contact_form" style="border-style:solid; width:100%; max-width:750px;"><!--Contact Form-->
+      <h1 style="font-family:Tahoma, Geneva, sans-serif">CONTACT FORM</h1>
+      
+      <div style="display:block;">
+          <hr style="width:100%; max-width:700px;"/>
+          <h1 style="font-family:Tahoma, Geneva, sans-serif; font-size:20px; margin-bottom:0px;">Full Name</h1>
+          <input type="text" placeholder="Name" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;"/>
+          <input type="text" placeholder="Middle Name" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;"/>
+          <input type="text" placeholder="Last Name" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;"/>
+      </div>
+      <div style="display:block; width:100%; max-width:750px;">
+          <input type="radio" name="gender" value="male" />Male
+          <input type="radio" name="gender" value="male" />Female
+      </div>
+      <h1 style="font-family:Tahoma, Geneva, sans-serif; font-size:20px; margin-bottom:0px;">Date of Birth</h1>
+      <div align="center" style="display:block; width:100%; max-width:750px; margin-bottom:10px;">
+          <select>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+          </select>
+          <select>
+                <script>
+                var myDate = new Date();
+                var year = myDate.getFullYear();
+                for(var i = 1; i < 32; i++){
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                }
+                </script>
+          </select>
+          <select id="year" name="year">
+              <script>
               var myDate = new Date();
               var year = myDate.getFullYear();
-              for(var i = 1; i < 32; i++){
+              for(var i = 1900; i < year+1; i++){
                   document.write('<option value="'+i+'">'+i+'</option>');
               }
               </script>
-        </select>
-        <select id="year" name="year">
-			<script>
-            var myDate = new Date();
-            var year = myDate.getFullYear();
-            for(var i = 1900; i < year+1; i++){
-                document.write('<option value="'+i+'">'+i+'</option>');
-            }
-            </script>
-         </select>
-    </div>
+           </select>
+      </div>
+      <div>
+        <input type="text" placeholder="Contact Number" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;" />
+        <input type="text" placeholder="Email Address" style="width:100%; max-width:220px; border-style:none; background-color:#CCC; display:inline; padding:7px; margin-bottom:10px;" />
+      </div>
+      <button type="submit" class="button" style="background-color: #099; border-style:none; font-family:Tahoma, Geneva, sans-serif; font-size:130%; font-weight:bold; color:#FFF; width:132px; height:30px; display:block; margin-bottom:10px;" align="center">Submit</button>
+      	</div><!--Contact Form ends-->
 </div>
 </body>
 </html>
